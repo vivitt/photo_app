@@ -1,5 +1,5 @@
 # Photo_APP
 
-An app that let user register/login and submit clothes and styling preferences from random images. 
+An app where users can register/login and select those photos wich like and feels more close to their outfit style. 
 
 REACT || Nodejs || MongoDB
