@@ -52,8 +52,7 @@ function User() {
     function handleUnlike (e) {
         e.preventDefault()
         getPhotos();
-        console.log('favsforuser', favsForUser)
-        console.log('userfavs' , userFavs)
+       
     }
     //like image
     function handleLike (event) {
@@ -69,7 +68,7 @@ function User() {
         fetch(`user/add/${photo.id}`, requestOptions)
             .then(res =>res.json())
             .then(data => {
-                console.log('added', data);
+                
                 navigate('/user');
                 getPhotos();
                 

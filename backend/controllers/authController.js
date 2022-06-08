@@ -22,7 +22,7 @@ function registerUser (req, res, next) {
                     email: req.body.email,
                     password: hashedPassword       
                 })
-                console.log(user)
+                
       
             return res.status(200).json({
                 email: user.email,

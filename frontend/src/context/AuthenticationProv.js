@@ -23,11 +23,11 @@ const AuthenticationProv = ({ children }) => {
                 const data = await response.json();
                 onLogin(data);
                 setIsLoading(false);
-                console.log('user data', data);
+                
                 return data;
             }
             setIsLoading(false);
-            console.log('no user data founded')
+            
             throw new Error(response.statusText);    
         } catch (error) {
             console.log(error)
