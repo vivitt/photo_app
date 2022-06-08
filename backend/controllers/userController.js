@@ -61,7 +61,7 @@ async function getUserPhotos (req, res) {
         let userID = req.user.id;
         const favPhotos = await userModel.findOne({_id: userID}, {shouldWear: 1});
         const favPhotosArr = favPhotos.shouldWear
-        console.log(favPhotos.shouldWear);
+        
         
             return res.json(favPhotosArr);
     

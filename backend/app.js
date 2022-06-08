@@ -8,6 +8,12 @@ const MongoStore = require("connect-mongo");
 
 const app = express()
 
+dotenv.config();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
 const userRoutes = require('./routes/users')
 const authRoutes = require('./routes/auth')
 
@@ -40,10 +46,6 @@ app.set("trust proxy", 1);
 
 
 
-dotenv.config();
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 //passport
 app.use(passport.initialize())

@@ -8,7 +8,8 @@ const Thumb = ({item, userFavs, setUserFavs}) => {
     
     const deleteFav = (event) => {
         event.preventDefault();
-        setUserFavs(userFavs.map((i) => ( i !== item)))
+        setUserFavs(userFavs.filter((i) => ( i !== item)))
+        
         const photoId = (item.id)
         const requestOptions = {
             method: 'POST',
@@ -18,7 +19,7 @@ const Thumb = ({item, userFavs, setUserFavs}) => {
         fetch(`user/remove/${photoId}`, requestOptions)
             .then(res =>res.json())
             .then(data => {
-                console.log('removed', data);
+                
                 navigate('/user');
                 
             })

@@ -122,7 +122,8 @@ function User() {
             
             <GalleryDiv>
             {
-            (userFavs.length < 1) ?<p>Nothing here yet...</p>
+            (userFavs.length === 0) 
+            ?<p>Nothing here yet...</p>
             :<>{userFavs.map(item => (<Thumb item={item} userFavs={userFavs} setUserFavs={setUserFavs} />)) } </>
     
             }

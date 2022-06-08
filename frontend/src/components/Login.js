@@ -24,7 +24,7 @@ function Login ({setLogin, login, setRegister}) {
         .then(data => {
           activeUser.setAuthData({name: data.name, email: data.email, favs: data.favs})
           onLogin({ email: data.email, name: data.name })
-          console.log(activeUser.authData, '---> logged')
+          
           navigate('/user', {replace: true})
           setEmail('');
           setPassword('')})
@@ -35,7 +35,7 @@ function Login ({setLogin, login, setRegister}) {
     e.preventDefault(); 
     setLogin(false); 
     setRegister(true);
-    console.log(login)
+    
   }
   return (
     <>
